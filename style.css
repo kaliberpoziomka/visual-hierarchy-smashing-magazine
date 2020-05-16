@@ -1,1 +1,316 @@
+:root {
+    --font: "Balsamiq Sans";
+}
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: auto;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px auto;
+}
+
+/* nav */
+nav {
+    grid-column: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav > *, .nav-p {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-family: "Balsamiq Sans" ,Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    padding: 6px 15px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.2);
+}
+
+nav p:first-child {
+    background-color: rgba(0,0,0,0.6);
+    padding: 6px 15px;
+}
+
+nav .nav-button {
+    background-color: rgba(0,0,0,0.4);
+}
+
+nav div:last-child {
+    padding: 15px 45px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+/* header */
+header {
+    grid-row: 2;
+    width: 100vw;
+    height: 1500px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-rows: 5fr 4fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header div:nth-child(1) span {
+    position: absolute;
+    top: 150px;
+    left: 40vw;
+    margin: auto;
+    padding: 30px 30px;
+    background: rgba(0,0,0,0.9);
+    border-radius: 10px;
+    color: white;
+    font-family: "Balsamiq Sans", Arial, Helvetica, sans-serif;
+    font-size: 2.7rem;
+    text-align: center;
+    z-index: 99;
+}
+
+
+/* header h1, header p,
+.first h1, .first p,
+.second h1, .second p,
+.third h1, .third p  */
+h1, p {
+    display: block;
+    width: 700px;
+    margin-left: 30px;
+    font-family: "Balsamiq Sans" ,Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    padding: 30px 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 5px;
+}
+
+header p::before {
+    display: inline-block;
+    content: '';
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background: rgba(0,0,0,0.5);
+}
+
+header p,
+.first h1,
+.second h1,
+.third h1 {
+    margin-top: 0;
+    width: 400px;
+    align-self: flex-start;
+    font-size: 1.7rem;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+}
+
+.first h1,
+.second h1,
+.third h1 {
+    background: rgba(0,0,0,0.7);
+}
+
+/* first section */
+/* .first,
+.second,
+.third  */
+section {
+    grid-row: 3;
+    padding-top: 150px;
+    height: 800px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+/* .first h1,
+.second h1,
+.third h1  */
+section h1 {
+    background: rgba(0,0,0,0.7);
+    font-size: 1.5rem;
+    width: auto;
+}
+
+/* .first p,
+.second p,
+.third p  */
+section p {
+    background: rgba(0,0,0,0.3);
+    font-size: 1.3rem;
+    width: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* .first .ad1,
+.second .cta1,
+.third .cta2 */
+section .cta {
+    margin-left: 30px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .ad1 span,
+.cta1 span,
+.cta2 span */
+.cta span {
+    color: white;
+    font-family: var(--font), Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.second,
+.third {
+    grid-row: 4;
+    grid-template-columns: 4fr 2fr 2fr;
+    align-items: flex-start;
+}
+
+.second .cta1,
+.third .cta2 {
+    width: 95%;
+    height: 680px;
+    background: rgba(0,0,0,0.9);
+    justify-self: end;
+}
+
+.third {
+    grid-row: 5;
+    grid-template-columns: 2fr 2fr 4fr;
+}
+
+.fourth {
+    grid-row: 6;
+    grid-template-columns: 1fr;
+    height: 1200px;
+}
+ 
+.fourth .cta3 {
+    width: 96%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.fifth {
+    grid-row: 7;
+    height: 300px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.fifth .photo1 {
+    transform: rotate(-30deg);
+    width: 250px;
+    height: 250px;
+}
+
+.fifth p {
+    padding-left: 20px;
+    width: 90%;
+}
+
+.sixth {
+    margin-top: 150px;
+    height: 1200px;
+    grid-row: 8;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr 6fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.sixth .photo2 {
+    width: 60px;
+    height: 60px;
+    justify-self: self-end;
+    transform: rotate(-30deg);
+}
+
+.seventh {
+    grid-row: 9;
+    height: 400px;
+    width: 100vw;
+}
+
+.seventh .cta4 {
+    width: 96vw;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.eigth {
+    margin-top: 0;
+    grid-row: 10;
+    height: 1200px;
+    width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+}
+
+.eigth p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.ninth {
+    grid-row: 11;
+    grid-template-columns: 1fr;
+    height: 1200px;
+}
+
+.ninth .cta5 {
+        width: 96%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: flex;
+}
+
+.tenth {
+    grid-row: 12;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 500px;
+}
+
+.tenth .cta6 {
+    width: 96%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
